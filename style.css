@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root{
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);    /* (paragraphs) */
+    --Very-light-gray: hsl(0, 0%, 95%);              /* (background, headings, buttons)*/
+
+    --small-font: 'Lexend Deca', sans-serif;            /* (paragraphs) */
+    --big-font: 'Big Shoulders Display', cursive;       /* (headings) */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* =================Cards-Container============= */
+.container{
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.card{
+    padding: 30px;
+    width: 33%;
+    height: 80%;
+    font-size: 15px;
+    position: relative;
+}
+
+.card1{
+    background-color: var(--Bright-orange);
+    border-radius: 5px 0 0 5px;
+}
+.card2{
+    background-color: var(--Dark-cyan);
+}
+.card3{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 5px 5px 0;
+}
+
+/* ===========media Queries============== */
+@media only screen and (max-width: 992px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .container{
+        flex-wrap: wrap;
+        width: 80%;
+        height: 100vh;
+        min-height: 100vh;
+        margin: 20px auto;
+    }
+
+    .card{
+        width: 90%;
+        height: 60%;
+        padding: 30px 40px;
+    }
+    .card1{
+        border-radius: 5px 5px 0 0;
+    }
+    .card3{
+        border-radius: 0 0 5px 5px;
+    }
+
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+.card-header{
+    font-weight: 700;
+    font-family: var(--big-font);
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.card-text{
+    font-weight: 400;
+    font-family: var(--small-font);
+    font-size: 12px;
+    color: var(--Transparent-white);
+    line-height: 1.9;
+}
+
+.btn{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn a{
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 45px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--small-font);
+    font-weight: 400;
+    font-size: 14px;
+    background-color: var(--Very-light-gray);
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+
+.card1 .btn a{
+    color: var(--Bright-orange);
+}
+.card2 .btn a{
+    color: var(--Dark-cyan);
+}
+.card3 .btn a{
+    color: var(--Very-dark-cyan);
+}
+
+.btn:hover a{
+    background-color: transparent;
+    border: 2px solid var(--Very-light-gray);
+}
+.card1 .btn:hover a,
+.card2 .btn:hover a,
+.card3 .btn:hover a{
+    color: var(--Very-light-gray);
+}
+
+
+.attribution{
+    font-size: 11px; 
+    text-align: center;
+    padding: 20px; 
+    width: 100%;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
